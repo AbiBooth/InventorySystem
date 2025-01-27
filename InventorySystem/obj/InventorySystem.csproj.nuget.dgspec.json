@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\InventorySystem\\InventorySystem\\InventorySystem.csproj": {}
+    "d:\\Projects\\InventorySystem\\InventorySystem\\InventorySystem.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\InventorySystem\\InventorySystem\\InventorySystem.csproj": {
+    "d:\\Projects\\InventorySystem\\InventorySystem\\InventorySystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\InventorySystem\\InventorySystem\\InventorySystem.csproj",
+        "projectUniqueName": "d:\\Projects\\InventorySystem\\InventorySystem\\InventorySystem.csproj",
         "projectName": "InventorySystem",
-        "projectPath": "D:\\Projects\\InventorySystem\\InventorySystem\\InventorySystem.csproj",
+        "projectPath": "d:\\Projects\\InventorySystem\\InventorySystem\\InventorySystem.csproj",
         "packagesPath": "C:\\Users\\abibo\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\InventorySystem\\InventorySystem\\obj\\",
+        "outputPath": "d:\\Projects\\InventorySystem\\InventorySystem\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\abibo\\AppData\\Roaming\\NuGet\\NuGet.Config"
