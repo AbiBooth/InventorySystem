@@ -36,6 +36,7 @@ namespace InventorySystem
                     break;
                 }
             }
+            Console.WriteLine("Inventory full");
         }
 
         //Remove an item from the inventory
