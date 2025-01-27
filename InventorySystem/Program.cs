@@ -21,6 +21,10 @@ namespace InventorySystem
             Item FoundItem = inventory.FindItem(0);
             Console.WriteLine("Found item: " + FoundItem.name);
 
+            //getting the number of items in the inventory
+            int itemCount = inventory.CountItems();
+            Console.WriteLine("Number of items in inventory: " + itemCount);
+
             //getting the amount of a particular item in the inventory
             int GetItemQuantity = inventory.GetItemQuantity(item1);
             Console.WriteLine("Quantity of item1: " + GetItemQuantity);
@@ -32,5 +36,3 @@ namespace InventorySystem
         }
     }
 }
-
-// See https://aka.ms/new-console-template for more information

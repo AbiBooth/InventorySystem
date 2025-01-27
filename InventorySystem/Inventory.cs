@@ -77,5 +77,18 @@ namespace InventorySystem
             }
             return count;
         }
+
+        public int CountItems()
+        {
+            int count = 0;
+            for(int i = 0; i < items.Length; i++)
+            {
+                if(items[i] != null)
+                {
+                    count++;
+                }
+            }
+            return count;
+        }
     }
 }
