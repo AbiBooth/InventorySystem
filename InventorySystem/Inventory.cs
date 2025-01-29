@@ -22,7 +22,7 @@ namespace InventorySystem
                     Console.WriteLine("Empty");
                     continue;
                 }
-                Console.WriteLine(items[i].name + ": " + items[i].desciption);
+                Console.WriteLine(items[i].name + ": " + items[i].desciption + ": " + items[i].type);
             }
         }
 
