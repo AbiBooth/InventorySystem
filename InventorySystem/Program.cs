@@ -43,9 +43,19 @@ namespace InventorySystem
             Console.WriteLine("Inventory sorted by name");
             inventory.DisplayInventory();
 
+            //sorting inventory by type
+            inventory.SortByType();
+            Console.WriteLine("Inventory sorted by type");
+            inventory.DisplayInventory();
+
             //removing an item from the inventory
             inventory.RemoveItem(item1);
             Console.WriteLine(item1.name + " removed from inventory");
+            inventory.DisplayInventory();
+
+            //clearing the inventory
+            inventory.ClearInventory();
+            Console.WriteLine("Inventory cleared");
             inventory.DisplayInventory();
         }
     }
