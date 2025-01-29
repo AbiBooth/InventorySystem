@@ -1,4 +1,5 @@
 using System;
+using System.Text.Json.Serialization;
 
 namespace InventorySystem
 {
@@ -47,6 +48,7 @@ namespace InventorySystem
                 if(items[i] == item)
                 {
                     items[i] = null;
+                    SortInventory();
                     break;
                 }
             }
@@ -79,6 +81,7 @@ namespace InventorySystem
             return count;
         }
 
+        //counts the amount of total items in the inventory
         public int CountItems()
         {
             int count = 0;
@@ -90,6 +93,94 @@ namespace InventorySystem
                 }
             }
             return count;
+        }
+
+        //Clears the inventory
+        public void ClearInventory()
+        {
+            for(int i = 0; i < items.Length; i++)
+            {
+                items[i] = null;
+            }
+        }
+
+        //Sorts the inventory putting all items in the first available spot and putting all empty spaces to the back
+        public void SortInventory()
+        {
+            for(int i = 0; i < items.Length; i++)
+            {
+                for(int j = 0; j < items.Length - 1; j++)
+                {
+                    if(items[j] == null)
+                    {
+                        Item temp = items[j];
+                        items[j] = items[j + 1];
+                        items[j + 1] = temp;
+                    }
+                }
+            }
+        }
+
+        //sorts the inventory based on item IDs
+        public void SortByID()
+        {
+            for(int i = 0; i < items.Length; i++)
+            {
+                for(int j = 0; j < items.Length; j++)
+                {
+                    if(items[j] != null && items[j + 1] != null)
+                    {
+                        if(items[j].id > items[j + 1].id)
+                        {
+                            Item temp = items[j];
+                            items[j] = items[j + 1];
+                            items[j + 1] = temp;
+                        }
+                    }
+                }
+            }
+        }
+
+        //sorts the inventory based on the item's names (alphabetically)
+        public void SortByName()
+        {
+            for(int i = 0; i < items.Length; i++)
+            {
+                for(int j = 0; j < items.Length; j++)
+                {
+                    if(items[j] != null && items[j + 1] != null)
+                    {
+                        if(string.Compare(items[j].name, items[j + 1].name) > 0)
+                        {
+                            Item temp = items[j];
+                            items[j] = items[j + 1];
+                            items[j + 1] = temp;
+                        }
+                    }
+                }
+            }
+        }
+
+        //sorts the inventory based on the item's types
+        public void SortByType()
+        {
+            string[] typeOrder = new string[3] {"T_1", "T_2", "T_3"};
+
+            for(int i = 0; i < items.Length; i++)
+            {
+                for(int j = 0; j < items.Length; j++)
+                {
+                    if(items[j] != null && items[j + 1] != null)
+                    {
+                        if(Array.IndexOf(typeOrder, items[j].type) > Array.IndexOf(typeOrder, items[j + 1].type))
+                        {
+                            Item temp = items[j];
+                            items[j] = items[j + 1];
+                            items[j + 1] = temp;
+                        }
+                    }
+                }
+            }
         }
     }
 }
